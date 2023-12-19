@@ -1,0 +1,224 @@
+body{
+  height: 100%;
+}
+
+.dark {
+  background: rgb(24,24,36);
+}
+
+.light {
+  background-color: #FAFAFA;
+}
+
+.white {
+  background: white;
+  color: black;
+}
+
+.darker {
+  background-color: rgb(37,39,60);
+  color: white;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  min-height: 300px;
+}
+
+main {
+  width: 550px;
+  height: 560px;
+  z-index: 2;
+  padding: 20px;
+}
+
+head {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+head h1{
+  font-size: 35px;
+  letter-spacing: 15px;
+}
+
+.toggle-icon{
+  font-size: 40px;
+  color: white;
+}
+
+.input-form {
+  margin: 40px 0 30px;
+  width: 100%;
+  height: 70px;
+  border-radius: 11px;
+  border: none;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-form input{
+  height: 60px;
+  width: 90%;
+  border-radius: 5px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type='text']{
+  font-size: 22px;
+}
+
+input::placeholder{
+  margin: 0 20px;
+}
+
+.todo-lists {
+  padding: 7px 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px; 
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.todo-list{
+  width: 100%;
+  height: 60px;
+  border-radius: 1px;
+  border: none;
+  border-bottom: 2px solid rgba(171, 167, 167, 0.5);
+  font-size: 18px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list p{
+  font-size: 22px;
+}
+
+.todo-list div{
+  display: flex;
+  align-items: center;
+}
+
+.todo-functions{
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-functions .filters {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  gap: 10px;
+}
+
+.todo-functions div {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  gap: 10px;
+}
+
+.checkbox{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin: 0 20px;
+
+}
+
+.checked{
+  background: rgb(135, 87, 212) !important;
+  border: none;
+  color: white;
+}
+
+.checkbox-dark{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: rgba(171, 167, 167, 0.5);
+  margin: 0 20px;
+}
+
+.close{
+  margin-right: 10px;
+  font-size: larger;
+}
+
+.line-through {
+  color: gray;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.active{
+  color:blue !important;
+}
+
+button{
+  border: none;
+}
+
+.filters {
+  display: block;
+  font-size: 22px;
+}
+
+.mobile-filters{
+  display: none;
+  margin: 30px 0;
+  padding: 14px 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px; 
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.mobile-filters .filters{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (max-width:500px) {
+  main {
+    position: relative;
+    top: -50px;
+  }
+  .todo-functions .filters {
+    display: none;
+    justify-content: center;
+    font-size: 18px;
+    gap: 10px;
+  }
+  .mobile-filters{
+    display: block;
+  }
+}
